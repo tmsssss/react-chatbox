@@ -23,6 +23,7 @@ export default class Connexion extends Component {
             <div className='connexionBox'>
                 <form className='connexion' onSubmit={this.handleSubmit}>
                     <input 
+                    className='sku'
                     onChange={this.handleChange}
                     value={this.state.pseudo}
                     placeholder='Pseudo'
