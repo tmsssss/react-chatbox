@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -7,21 +7,28 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import NotFound from './components/NotFound';
 
-const Root = () => (
-  <BrowserRouter>
-    <Switch>
-      <Route exact path='/'>
-        <Connexion/>
-      </Route>
-      <Route  path='/pseudo/:pseudo'>
-        <App/>
-      </Route>
-      <Route>
-        <NotFound />
-      </Route>
-    </Switch>
-  </BrowserRouter>
-)
+class Root extends Component{
+  componentDidMount(){
+    console.log(this.props)
+  }
+  render(){
+    return(
+      <BrowserRouter>
+      <Switch>
+        <Route exact path='/' >
+          <Connexion/>
+        </Route>
+        <Route  path='/pseudo/:pseudo'>
+          <App/>
+        </Route>
+        <Route>
+          <NotFound />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+    )
+  }
+}
 
 ReactDOM.render(
   <React.StrictMode>

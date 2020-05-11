@@ -7,12 +7,12 @@ export default class Connexion extends Component {
         goToChat: false
     }
 
-    handleChange = (event) => {
-        const pseudo = event.target.value 
+    handleChange = (e) => {
+        const pseudo = e.target.value 
         this.setState({ pseudo })
     }
-    handleSubmit = (event) =>{
-        event.preventDefault()
+    handleSubmit = (e) =>{
+        e.preventDefault()
         this.setState({ goToChat: true })
     }
     render() {
