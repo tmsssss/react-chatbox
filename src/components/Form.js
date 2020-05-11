@@ -8,7 +8,7 @@ export default class Form extends Component {
 
 
     createMessage = () => {
-        const { addMessage, pseudo, length} = this.props
+        const { addMessage, pseudo, length } = this.props
 
         const message = {
             pseudo,
@@ -16,7 +16,7 @@ export default class Form extends Component {
         }
         addMessage(message)
 
-        // Reset textarea
+        // Reset 
         this.setState({ message: '', length })
     }
 
