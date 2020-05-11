@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import Connexion from './components/Connexion'
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import NotFound from './components/NotFound';
 
 const Root = () => (
