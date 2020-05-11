@@ -6,10 +6,6 @@ export default class Form extends Component {
         length: this.props.length
     }
 
-    componentDidMount(){
-        const { addMessage, pseudo} = this.props
-        console.log(pseudo);
-    }
 
     createMessage = () => {
         const { addMessage, pseudo, length} = this.props
@@ -36,7 +32,7 @@ export default class Form extends Component {
     }
 
     handleKeyUp = (e) => {
-        if (e.key == 'Enter') {
+        if (e.key === 'Enter') {
             this.createMessage()
         }
     }
@@ -52,7 +48,7 @@ export default class Form extends Component {
                 onChange={this.handleChange} 
                 maxLength='140' 
                 required />
-                <div className="info">
+                <div className="info sku">
                     {this.state.length}
                 </div>
                 <button type='submit'>Envoyer</button>
